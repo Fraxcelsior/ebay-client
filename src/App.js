@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import store from './store'
 import {Provider} from 'react-redux'
-import advertisementListContainer from './components/advertisementListContainer';
+import {Route} from 'react-router-dom'
+import AdvertisementListContainer from './components/AdvertisementListContainer';
 
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
-          <advertisementListContainer />
+          <Route path="/" exact component={AdvertisementListContainer} />
       </Provider>
     );
   }
